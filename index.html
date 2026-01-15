@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>115 學測公民武功秘笈：複習網頁</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #e67e22;
+            --law: #2980b9;
+            --econ: #27ae60;
+            --bg: #f8f9fa;
+        }
+        body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; background: var(--bg); margin: 0; padding: 20px; line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; }
+        header { text-align: center; padding: 40px 0; background: var(--primary); color: white; border-radius: 15px; margin-bottom: 30px; }
+        
+        .section-title { border-left: 6px solid var(--accent); padding-left: 15px; margin: 40px 0 20px; color: var(--primary); font-size: 1.5rem; }
+        
+        /* 互動式卡片設計 */
+        .card { background: white; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 15px; overflow: hidden; transition: 0.3s; }
+        .card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .card-header { padding: 15px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; background: #fff; }
+        .card-content { display: none; padding: 20px; border-top: 1px solid #eee; background: #fdfdfd; }
+        
+        /* 表格樣式優化 */
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.95rem; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background: #f2f2f2; color: var(--primary); }
+        
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; color: white; }
+        .bg-law { background: var(--law); }
+        .bg-econ { background: var(--econ); }
+        .highlight { color: #c0392b; font-weight: bold; }
+        
+        .plus { font-size: 1.2rem; transition: transform 0.3s; }
+        .active .plus { transform: rotate(45deg); color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>115 公民與社會：學測武功秘笈</h1>
+        <p>點擊各主題展開複習內容，強化你的記憶點！</p>
+    </header>
+
+    <div class="section-title">【社政篇】人權與民主制度 </div>
+
+    <div class="card" id="c1">
+        <div class="card-header" onclick="toggle('c1')">
+            <span>◎ 三代人權的進展 (重點複習)</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="card-content">
+            <table>
+                <tr><th>階段</th><th>特色</th><th>主體</th><th>性質與主張</th></tr>
+                <tr><td>第一代</td><td>消極人權</td><td>個人</td><td>公民自由、政治權；要求國家降低干預 </td></tr>
+                <tr><td>第二代</td><td>積極人權</td><td>群體</td><td>經濟、社會、文化權；要求國家積極干預 (社會福利) </td></tr>
+                <tr><td>第三代</td><td>集體人權</td><td>全人類</td><td>環境、發展、民族自決權；反對歧視與隔離 </td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" id="c2">
+        <div class="card-header" onclick="toggle('c2')">
+            <span>◎ 西方民主理論比較 (審議 vs 菁英)</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="card-content">
+            <ul>
+                <li><strong>菁英民主理論 (熊彼得)：</strong> 民主是一種「選舉政治領導人」的方式，強調投票 。</li>
+                <li><strong>參與民主理論 (道爾)：</strong> 權力應高度分散，鼓勵不同勢力參與決策 。</li>
+                <li><strong>審議民主理論 (哈伯瑪斯)：</strong> <span class="highlight">討論中心</span>，強調公民在公平條件下理性溝通形成共識 。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="c3">
+        <div class="card-header" onclick="toggle('c3')">
+            <span>◎ 民主國家政府體制 (內閣、總統、雙首長)</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="card-content">
+            <p><strong>左右共治 (法國)：</strong> 當國會多數黨與總統政黨不同時，總統依慣例任命反對陣營人士為總理，分享行政權 。</p>
+            <table>
+                <tr><th>體制</th><th>行政首長向誰負責</th><th>有無倒閣/解散權</th></tr>
+                <tr><td>內閣制</td><td>內閣向國會負責 </td><td>皆有 </td></tr>
+                <tr><td>總統制</td><td>總統向全民負責 </td><td>皆無 </td></tr>
+                <tr><td>雙首長制</td><td>總理向國會負責 </td><td>皆有 </td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-title">【法律篇】基本權、刑事與民法 </div>
+
+    <div class="card" id="l1">
+        <div class="card-header" onclick="toggle('l1')">
+            <span>◎ 刑事責任能力 (年齡分界點)</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="card-content">
+            <ul>
+                <li><strong>無責任能力：</strong> <span class="highlight">未滿 14 歲</span> (不罰) 。</li>
+                <li><strong>限制責任能力：</strong> 14~18 歲、80 歲以上 (得減輕其刑) 。</li>
+                <li><strong>完全責任能力：</strong> 18~80 歲 (負完全刑責) 。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="l2">
+        <div class="card-header" onclick="toggle('l2')">
+            <span>◎ 比例原則 (三子原則)</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="card-content">
+            <ol>
+                <li><strong>適當性：</strong> 手段必須有助於達成目的 。</li>
+                <li><strong>必要性：</strong> 多種手段中，選擇對人民權利「侵害最小」者 。</li>
+                <li><strong>衡量性：</strong> 損害不得與達成的利益顯失均衡 。</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-title">【經濟篇】生產可能曲線與 GDP </div>
+
+    <div class="card" id="e1">
+        <div class="card-header" onclick="toggle('e1')">
+            <span>◎ GDP 與 GNP 的區分</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="card-content">
+            <ul>
+                <li><strong>GDP (國內生產毛額)：</strong> 以<span class="highlight">國境</span>為界。公式：C + I + G + (X - M) 。</li>
+                <li><strong>GNP (國民生產毛額)：</strong> 以<span class="highlight">國籍</span>為界。公式：GDP + 國外要素所得淨額 。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="e2">
+        <div class="card-header" onclick="toggle('e2')">
+            <span>◎ 公共財與私有財 (排他性 vs 共享性)</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="card-content">
+            <table>
+                <tr><th></th><th>排他性</th><th>無排他性</th></tr>
+                <tr><th>獨享性</th><td>純私有財 (如：手機) </td><td>準私有財 (如：海洋漁產) </td></tr>
+                <tr><th>共享性</th><td>準公共財 (如：捷運) </td><td>純公共財 (如：國防、燈塔) </td></tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggle(id) {
+        const card = document.getElementById(id);
+        const content = card.querySelector('.card-content');
+        
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            card.querySelector('.card-header').classList.remove('active');
+        } else {
+            content.style.display = "block";
+            card.querySelector('.card-header').classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
